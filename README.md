@@ -44,22 +44,23 @@ Provide a clear way to recreate your setup, with evaluations based on:
 ## **Project Structure:**
 
 ```
-microservices-demo.github.io/
+Capstone-Project-Third-Semester/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yaml    # GitHub Actions workflow for CI/CD automation.
-├── kubernetes/
-│   ├── sock-shop-deployment.yaml   # Kubernetes deployment manifests
-│   └── sock-shop-ingress.yaml      # Kubernetes ingress manifest
-├── manifests-monitoring/
-│   ├── prometheus/
-│   │   └── values.yaml   # Custom values for Prometheus Helm chart
-│   └── grafana/
+├── deploy/
+|    └── kubernetes/
+│     ├── sock-shop-deployment.yaml   # Kubernetes deployment manifests
+│     └── sock-shop-ingress.yaml      # Kubernetes ingress manifest
+├──  └── manifests-monitoring/
+│      ├── prometheus/
+│      │   └── values.yaml   # Custom values for Prometheus Helm chart
+│      └── grafana/
 │       └── values.yaml   # Custom values for Grafana Helm chart
-├── logging/
+├──  logging/
 │       ├── elasticsearch.yaml  # Elasticsearch deployment
 │       ├── filebeat.yaml       # Fluentd configuration
-│       └── kibana-deployment.yaml   # Kibana dashboard configuration
+│       └── kibana.yaml   # Kibana dashboard configuration
 |       └── cronjob.yaml        # Fluentd configuration
 |       └── metricbeat.yaml     #  Fluentd configuration
 |       └── logstash-deployment.yaml   # Fluentd configuration
@@ -69,6 +70,7 @@ microservices-demo.github.io/
 │   ├── outputs.tf      # Terraform outputs
 │   └── variables.tf          # Variables configuration
 └──README.md
+
 ```
 
 1. Install Prerequisites:
